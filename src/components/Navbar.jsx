@@ -1,11 +1,12 @@
 import React from "react";
 
+import Logo from "../../public/Images/Tea.png"; 
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between bg-[#8ec06c] px-[5%] py-4 sticky top-0 z-[1000]">
       {/* Logo */}
-      <div className="logo">
-        <img src="/Sippure logo.png" alt="Sippure Logo" className="h-[50px]" />
+      <div className="Logo">
+        <img src="Images/Sippure logo.png" alt="Sippure Logo" className="h-[50px]" />
       </div>
 
       {/* Navigation Links */}
