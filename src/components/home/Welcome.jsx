@@ -1,9 +1,11 @@
 import React from 'react';
+import Slider from './slider';
 
 export default function Welcome() {
   return (
     <>
-      
+    
+      <Slider />
 
       {/* Hero Section */}
       <section className="relative w-full h-screen bg-white overflow-hidden flex items-start justify-start px-12 py-12 text-center">
