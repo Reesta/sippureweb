@@ -1,10 +1,14 @@
-import React from 'react';
 
-const About = () => {
+"use client";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function About() {
   return (
-    <div className="animate-fadeInUp">
-      {/* Hero Heading */}
-      <section className="text-center py-8">
+    <section id="about" className="animate-fadeInUp scroll-mt-20">
+   
+      <div className="text-center py-8">
         <h2 className="text-lg text-green-700 font-semibold mb-2 transition-colors duration-300 hover:text-green-900 cursor-default">
           Our Story
         </h2>
@@ -14,10 +18,10 @@ const About = () => {
         <h4 className="text-green-700 italic font-semibold text-lg transition-colors duration-300 hover:text-green-900 cursor-default">
           Naturally Refreshing, Mindfully Made!!
         </h4>
-      </section>
+      </div>
 
       {/* About Content */}
-      <section className="flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto px-6 md:px-20 py-10 gap-10">
+      <div className="flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto px-6 md:px-20 py-10 gap-10">
         {/* Image Circle */}
         <div className="flex-1 flex justify-center items-center">
           <div
@@ -29,10 +33,12 @@ const About = () => {
               cursor-pointer
             "
           >
-            <img
-              src="/AboutUs.png"
+            <Image
+              src="/Images/About.png"
               alt="Herbal Tea"
-              className="w-full h-full object-cover"
+              width={520}
+              height={520}
+              className="rounded-full object-cover"
               loading="lazy"
             />
           </div>
@@ -44,18 +50,13 @@ const About = () => {
             A Cup of Nature, A Sip of Wellness
           </h3>
           <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed transition-opacity duration-500">
-            At <strong className="text-green-700">SIPPURE</strong>, we believe that wellness starts with simplicity —
-            and what's simpler than a soothing cup of herbal tea?
+            At <strong className="text-green-700">SIPPURE</strong>, we believe that wellness starts with simplicity — and what's simpler than a soothing cup of herbal tea?
           </p>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed transition-opacity duration-500">
-            Born from a passion for natural living, our platform is more than just a tea shop.
-            It's a space where tradition meets technology, bringing the age-old comfort of
-            herbal remedies to your modern-day routine.
+            Born from a passion for natural living, our platform is more than just a tea shop. It's a space where tradition meets technology, bringing the age-old comfort of herbal remedies to your modern-day routine.
           </p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
-};
-
-export default About;
+}
